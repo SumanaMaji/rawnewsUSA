@@ -1,0 +1,34 @@
+{
+  "name": "RawNews USA",
+  "displayName": "RawNews USA",
+  "expo": {
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+             {
+               "scheme": "https",
+               "host": "bluebookblacknews.com"
+             }
+           ],
+         "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+       }
+    ]
+    },
+    "ios": {
+      "googleServicesFile": "./GoogleService-Info.plist"
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/perf",
+      "@react-native-firebase/crashlytics",
+      "./plugins/withAndroidVerifiedLinksWorkaround"
+    ]
+  }
+}
